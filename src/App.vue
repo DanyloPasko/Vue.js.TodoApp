@@ -93,7 +93,7 @@ export default {
           :key="todo.id"
           :todo="todo"
           @update="Object.assign(todo, $event)"
-          @delete="todos.splice(todos.indexOf(todo))"
+          @delete="todos.splice(todos.indexOf(todo), 1)"
         />
 
       </TransitionGroup>
