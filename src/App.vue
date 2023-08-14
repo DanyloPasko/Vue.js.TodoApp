@@ -55,6 +55,9 @@ export default {
       })
 
       this.title = '';
+    },
+    clearCompleted() {
+      this.todos = this.activeTodos;
     }
   }
 };
@@ -104,7 +107,8 @@ export default {
         <button
           type="button"
           class="todoapp__clear-completed"
-          v-if="activeTodos.length > 0"
+          v-if="completedTodos.length > 0"
+          @click="clearCompleted"
         >
           Clear completed
         </button>
